@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a688205d-1fc7-4f9a-8cb8-77ce579e5b53" name="Default Changelist" comment="" />
+    <list default="true" id="56d9195f-81ec-4bc8-9e4b-8187a21ad35c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +15,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1UYGzrfPNsQhuiFVswLluaLxwbn" />
+  <component name="ProjectId" id="1V9dHkCyalQIBvqaOu9bKgpjkjC" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -32,9 +32,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="ColorDetect" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ColorDetection" />
+  <component name="RunManager">
+    <configuration name="CanvasMouse" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Canvas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -46,29 +46,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ColorDetect.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ColorDetection" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CanvasMouse.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -79,8 +57,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.ColorDetect" />
+        <item itemvalue="Python.CanvasMouse" />
       </list>
     </recent_temporary>
   </component>
@@ -89,14 +66,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a688205d-1fc7-4f9a-8cb8-77ce579e5b53" name="Default Changelist" comment="" />
-      <created>1575526381692</created>
+      <changelist id="56d9195f-81ec-4bc8-9e4b-8187a21ad35c" name="Default Changelist" comment="" />
+      <created>1576669158758</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1575526381692</updated>
-      <workItem from="1575526396147" duration="3355000" />
-      <workItem from="1575570642083" duration="1135000" />
-      <workItem from="1575571797969" duration="4203000" />
+      <updated>1576669158758</updated>
+      <workItem from="1576669161936" duration="284000" />
+      <workItem from="1576669563333" duration="587000" />
+      <workItem from="1576670214287" duration="1913000" />
+      <workItem from="1576672142016" duration="967000" />
+      <workItem from="1576673179115" duration="1311000" />
     </task>
     <servers />
   </component>
@@ -104,7 +83,6 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ColorDetection$main.coverage" NAME="main Coverage Results" MODIFIED="1575575941591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ColorDetection$ColorDetect.coverage" NAME="ColorDetect Coverage Results" MODIFIED="1575573096019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Canvas$CanvasMouse.coverage" NAME="CanvasMouse Coverage Results" MODIFIED="1576673537019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

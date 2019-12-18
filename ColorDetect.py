@@ -8,25 +8,21 @@ def ColorDetect():
     while(1):
         def show_values():
             cv2.destroyAllWindows()
+
             x = CRH.rgb_to_hsv(float(spinboxr.get()), float(spinboxg.get()), float(spinboxb.get()))
             x = list(x)
             x[0] = x[0] / 2
             x[1] = x[1] * 2.55
             x[2] = x[2] * 2.55
-            # Take each frame
+
             frame = cv2.imread('colors.png')
-            # Convert BGR to HSV
             hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-
-            # Threshold the HSV image to get only blue colors
             mask = cv2.inRange(hsv, np.float32([x[0] - 2, x[1] - 5, x[2] - 5]), np.float32([x[0] + 2, x[1] + 5, x[2] + 5]))
-
-            # Bitwise-AND mask and original image
             res = cv2.bitwise_and(frame, frame, mask=mask)
-
             cv2.imshow('frame', frame)
             cv2.imshow('mask', mask)
             cv2.imshow('res', res)
+
             master.destroy()
 
         master = Tk()
