@@ -3,6 +3,7 @@
 import cv2
 import numpy as np
 import CalculateRealHSV
+import os
 mouseX=0
 mouseY=0
 hsvcam = [0, 0, 0]
@@ -11,8 +12,13 @@ cap = cv2.VideoCapture(0)
 def mouseposition(event,x,y,flags,param):
 
     if event == cv2.EVENT_LBUTTONDOWN:
-        global mouseX, mouseY
+        global out
+        out.release()
 
+        os.remove("outpy.avi")
+
+        out = cv2.VideoWriter('outpy.avi', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 10, (frame_width, frame_height))
+        global mouseX, mouseY
         mouseY,mouseX = x,y
         global hsvcam
         print(ima1[mouseX][mouseY][0], ima1[mouseX][mouseY][1], ima1[mouseX][mouseY][2])
@@ -21,11 +27,14 @@ def mouseposition(event,x,y,flags,param):
         hsvcam[0] = hsvcam[0] / 2
         hsvcam[1] = hsvcam[1] * 2.55
         hsvcam[2] = hsvcam[2] * 2.55
-
+frame_height = int(cap.get(4))
+frame_width = int(cap.get(3))
+# Define the codec and create VideoWriter object.The output is stored in 'outpy.avi' file.
+out = cv2.VideoWriter('outpy.avi', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 10, (frame_width, frame_height))
 # This drives the program into an infinite loop.
 while (1):
     # Captures the live stream frame-by-frame
-    _, frame = cap.read()
+    ret, frame = cap.read()
     # Converts images from BGR to HSV
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     ima1 = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -41,7 +50,8 @@ while (1):
     cv2.imshow('mask', mask)
     cv2.imshow('res', res)
     cv2.setMouseCallback('frame', mouseposition)
-
+    if ret == True :
+        out.write(res)
     # This displays the frame, mask
     # and res which we created in 3 separate windows.
     k = cv2.waitKey(5) & 0xFF
@@ -49,6 +59,7 @@ while (1):
         break
     # Destroys all of the HighGUI windows.
 cv2.destroyAllWindows()
+out.release()
 
     # release the captured frame
 cap.release()

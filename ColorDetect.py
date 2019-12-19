@@ -2,9 +2,13 @@ import cv2
 import numpy as np
 import CalculateRealHSV as CRH
 from tkinter import *
+import os
+cap = cv2.VideoCapture(0)
+frame_width = int(cap.get(3))
+frame_height = int(cap.get(4))
+out = cv2.VideoWriter('outpy.avi', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 10, (frame_width, frame_height))
 def ColorDetect():
     cap = cv2.VideoCapture(0)
-
     while(1):
         def show_values():
             cv2.destroyAllWindows()
@@ -22,7 +26,7 @@ def ColorDetect():
             cv2.imshow('frame', frame)
             cv2.imshow('mask', mask)
             cv2.imshow('res', res)
-
+            out.write(frame)
             master.destroy()
 
         master = Tk()
